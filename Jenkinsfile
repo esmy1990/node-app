@@ -47,7 +47,8 @@ pipeline
 		sh "chmod +x changeTag.sh" 
 			sh "./changeTag.sh ${IMAGE}"
 		sshagent (credentials: ['dev']) {
-    sh "scp -o StrictHostKeyChecking=no -l services.yml root@192.168.0.7:/home"
+    sh 'ssh -o StrictHostKeyChecking=no root@192.168.0.7 uptime'
+            sh 'ssh -v root@192.168.0.7'
   }
 		}
 	}
