@@ -5,7 +5,7 @@ pipeline
 	{
   	def mvnhome = tool name: 'maven 3.6.3', type: 'maven'
 	def mvncmd = "${mvnhome}/bin/mvn"
-	NAME = "my-app"
+	NAME = "node-app"
     VERSION = "${env.BUILD_ID}"
     IMAGE = "${NAME}:${VERSION}"
 	}
@@ -15,7 +15,7 @@ pipeline
 	{
 		steps
 		{
-		git 'https://github.com/esmy1990/my-app'
+		git 'https://github.com/esmy1990/node-app'
 		}
 	}
 	
