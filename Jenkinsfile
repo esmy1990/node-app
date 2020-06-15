@@ -47,7 +47,7 @@ pipeline
 		sh "chmod +x changeTag.sh" 
 			sh "./changeTag.sh ${IMAGE}"
 		sshagent (credentials: ['dev']) {
-    sh "ssh -o StrictHostKeyChecking=no -l services.yml node-app-pod.yml root@192.168.0.7:/root/"
+    sh "ssh -o StrictHostKeyChecking=no -l services.yml root@192.168.0.7:/root/"
   }
 		}
 	}
