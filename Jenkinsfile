@@ -19,13 +19,7 @@ pipeline
 		}
 	}
 	
-	stage("maven build")
-	{
-		steps
-		{
-			sh  "${mvncmd} clean package"
-		}
-	}
+	
 	stage ("docker build")
 	{
 		steps
