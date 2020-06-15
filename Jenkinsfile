@@ -49,6 +49,7 @@ pipeline
 		sshagent (credentials: ['dev']) {
     sh 'ssh -o StrictHostKeyChecking=no root@192.168.0.7 uptime'
             sh 'ssh -v root@192.168.0.7'
+			sh 'scp services.yml root@192.168.0.7:/home'
   }
 		}
 	}
