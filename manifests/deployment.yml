@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: esmynodeapp 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: esmynodeapp 
+    spec:
+      containers:
+        - name: esmynodeapp 
+          image: esmycontainerregistry.azurecr.io/esmynodeapp
+          ports:
+          - containerPort: 8080
